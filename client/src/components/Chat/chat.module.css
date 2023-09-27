@@ -1,0 +1,246 @@
+.chat {
+    display: grid;
+    grid-template-columns: 300px 2fr;
+    height: 100vh;
+    width: 100vw
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 40px;
+    gap: 30px;
+    border-right: 1px solid #e6e6e6;
+}
+
+.users li {
+    font-size: 22px;
+    color: #7f7f7f;
+
+    margin-left: 26px;
+    margin-bottom: 15px;
+
+    border-bottom: 1px solid #e6e6e6;
+
+}
+
+.leaveInChat {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    padding-right: 50px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.leaveInChat button {
+    background-color: #c22d2d;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 20px;
+    border-radius: 4px;
+
+    color: #fff;
+    font-size: 20px;
+    transition: .2s ease-in-out;
+
+    overflow: hidden;
+    position: relative;
+
+}
+
+.leaveInChat button:hover {
+    background-color: #b22929;
+
+}
+
+.leaveInChat img {
+    width: 30px;
+    filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(7500%) hue-rotate(91deg) brightness(104%) contrast(100%);
+
+    margin-top: 2px;
+    margin-left: 6px;
+
+}
+
+.chatBody {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-gap: 10px;
+
+}
+
+.messages {
+    overflow-y: scroll;
+    max-height: 710px;
+    scroll-behavior: smooth;
+}
+
+
+.messages::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+}
+
+.messages::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+
+.messages::-webkit-scrollbar-track {
+    background: #216bbf;
+    border: 0px none #ffffff;
+    border-radius: 40px;
+}
+
+.sender {
+    width: 100%;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 20px;
+
+}
+
+.sender div {
+    padding: 10px 15px;
+    margin-right: 35px;
+
+    max-width: 300px;
+
+    border-radius: 20px 0 20px 20px;
+    background-color: #216bbf;
+
+}
+
+.sender div p,
+.recipient div p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.sender .senderName,
+.recipient .senderName {
+    color: #7f7f7f;
+
+}
+
+.sender .senderName {
+    margin-right: 10px;
+}
+
+.recipient .senderName {
+    margin-left: 10px;
+}
+
+.recipient {
+    width: 100%;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 20px;
+}
+
+.recipient div {
+    background-color: #899eb3;
+    border-radius: 0 20px 20px 20px;
+
+    padding: 10px 15px;
+    margin-left: 35px;
+
+    max-width: 300px;
+
+}
+
+body .sender .time {
+    width: 100%;
+    text-align: end;
+    font-size: 16px;
+    color: #a7ccf7;
+    margin-bottom: -5px;
+
+}
+
+body .recipient .time {
+    width: 100%;
+    text-align: start;
+    font-size: 16px;
+    color: #deebf8;
+    margin-bottom: -5px;
+}
+
+.senderFieldShell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.senderField {
+    display: flex;
+    align-items: center;
+
+    width: 80%;
+    height: 60px;
+
+    margin: 20px;
+
+    border: 1px solid #216bbf;
+    border-radius: 10px;
+}
+
+.senderField input {
+    border-radius: 10px;
+    outline: none;
+
+    height: 58px;
+    width: 100%;
+
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+.senderField button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 58px;
+    width: 50px;
+
+    background-color: #216bbf;
+    border-radius: 0 8px 8px 0;
+    transition: .2s ease-in-out;
+}
+
+.senderField button:hover {
+    background-color: #1f64b3;
+}
+
+.senderField button img {
+    filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(7500%) hue-rotate(91deg) brightness(104%) contrast(100%);
+    width: 30px;
+}
